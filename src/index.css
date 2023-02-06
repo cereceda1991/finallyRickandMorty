@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+/* --- RESET --- */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background-color: #E8E2E2;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+button {
+    display: block;
+    border: none;
+}
+
+ul,
+li {
+    padding-left: 0;
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+}
+
+input {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}

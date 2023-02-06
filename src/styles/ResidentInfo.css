@@ -1,0 +1,105 @@
+.card__resident {
+    position: relative;
+    background-color: black;
+    border-radius: .5rem;
+    display: flex;
+    color: white;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.card__resident:before {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    content: "";
+    display: block;
+    height: 5px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(24deg, rgba(170, 170, 170, 0.6110819327731092) 40%, #8a2be2 60%);
+    bottom: 0;
+    border-radius: 0 0 .5em .5em;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.card__resident:hover:before {
+    transform: scaleX(1);
+}
+
+.card__avatar {
+    overflow: hidden;
+    border-radius: 8px 0 0 8px;
+}
+
+.card__name {
+    padding-bottom: 1rem;
+}
+
+.card__body {
+    padding: 1rem;
+    line-height: 1.3rem;
+    text-transform: capitalize;
+}
+
+.card__circle {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #8a8585;
+}
+
+.Alive {
+    background-color: #4AB648;
+}
+
+.Dead {
+    background-color: red;
+}
+
+.card__circle-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding-left: 1rem;
+    gap: 1rem;
+    top: 15px;
+    width: 25%;
+    height: 42px;
+    background-color: rgba(7, 7, 7, 0.8);
+    border-radius: 0px 12px 12px 0px;
+    text-transform: capitalize;
+}
+
+.card__item-label {
+    display: block;
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: #8a8585;
+    font-weight: 800;
+}
+
+.card__item-value {
+    padding-left: .2rem;
+
+}
+
+@media (max-width: 915px) {
+    .card__resident {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card__avatar {
+        border-radius: 4px 4px 0px 0px;
+    }
+
+    .card__circle-container {
+        width: 70%;
+
+    }
+}

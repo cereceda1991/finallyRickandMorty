@@ -1,0 +1,130 @@
+.App {
+    font-family: 'Raleway', sans-serif;
+}
+
+.card__head-front {
+    background-image: url(./assets/cover.png);
+    background-position: 50%;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 350px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card__form {
+    display: flex;
+    gap: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 48px 0 rgb(0 0 0 / 20%);
+    height: 40px;
+    padding: .5rem;
+    background-color: #fff;
+    width: max-content;
+}
+
+.card__form button {
+    color: black;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.card__input {
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    padding-left: 56px;
+    width: 100%;
+    font-family: inherit;
+}
+
+.card__residents {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    padding: 2rem;
+}
+
+.card__title {
+    font-size: 28px;
+    text-shadow: -1px -8px 5px #000;
+}
+
+.buttton__up {
+    display: block;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 2rem 2rem 2rem 0;
+    color: black;
+}
+
+.card__select {
+    font-family: inherit;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block
+}
+
+.container__location {
+    padding: 1rem 1rem;
+    align-items: center;
+}
+
+/* 
+.container__button-pages {
+    display: flex;
+    gap: 1rem;
+    justify-content: left;
+    align-items: center;
+    padding-left: 3rem;
+    overflow: auto;
+} */
+
+/* .button__pages {
+    display: flex;
+    width: 3.5rem;
+    aspect-ratio: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: black;
+    color: #fff;
+}
+
+.button__pages:hover {
+    background-color: #aaa;
+    cursor: pointer;
+    color: black;
+    transition: 1s;
+} */
+
+@media (max-width: 800px) {
+    .card__residents {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .card__title {
+        font-size: 3rem;
+        border-radius: .6rem 0.5.2rem 0;
+        padding: .1rem;
+
+    }
+}

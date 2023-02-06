@@ -1,0 +1,26 @@
+.card__location {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: .5rem;
+}
+
+.info__location {
+    display: flex;
+    gap: .5rem;
+}
+
+@media (max-width:800px) {
+
+    .card__location {
+        display: flex;
+        flex-direction: column;
+        padding: .5rem;
+        border-radius: .5rem;
+    }
+}
