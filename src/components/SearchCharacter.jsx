@@ -8,7 +8,7 @@ const SearchCharacter = ({ setSelectedUrl, setSelectedLocation }) => {
     // UseEffect para realizar una llamada a la API al cambiar el valor de "characterName"
     // La respuesta de la llamada se almacena en el estado "characters"
     useEffect(() => {
-        if (!characterName) {
+        if (characterName === "") {
             setCharacters([]);
             return;
         }
@@ -22,7 +22,7 @@ const SearchCharacter = ({ setSelectedUrl, setSelectedLocation }) => {
 
     // Función que se llama cuando un resultado de la búsqueda es seleccionado
     // Actualiza el nombre de personaje seleccionado y limpia la lista de resultados de búsqueda
-    // Establece la URL y la ubicación del personaje seleccionado en los estados respectivos
+    // Establece la URL y la ubicación del personaje seleccionado en los estados 
 
     const handleClick = (result) => {
         setCharacterName(result.name);
@@ -46,15 +46,16 @@ const SearchCharacter = ({ setSelectedUrl, setSelectedLocation }) => {
                 value={characterName}
                 onChange={(e) => setCharacterName(e.target.value)}
             />
-            {characters.length > 0 && (
+            {characters?.length > 0 && (
                 <ul>
-                    {characters.map((char) => (
+                    {characters?.map((char) => (
                         <li
                             className="card__Srch-list"
                             key={char.id}
                             onClick={() => handleClick(char)}
                         >
-                            {char.name}
+                            <p>{char.name}</p>
+                            {char.location?.name?.url}
                         </li>
                     ))}
                 </ul>

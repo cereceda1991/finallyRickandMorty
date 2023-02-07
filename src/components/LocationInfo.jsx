@@ -2,11 +2,12 @@ import '../styles/LocationInfo.css'
 import React from 'react';
 
 const LocationInfo = ({ location }) => {
-    if (!location) {
+    const selectedData = location;
+    if (!selectedData) {
         return null;
     }
 
-    const { name, id, type, dimension, residents } = location;
+    const { name, id, type, dimension, residents } = selectedData;
     return (
         <article className="card__location">
             <p className="info__location">Name: <b>{name}</b></p>
@@ -19,3 +20,4 @@ const LocationInfo = ({ location }) => {
 };
 
 export default LocationInfo;
+

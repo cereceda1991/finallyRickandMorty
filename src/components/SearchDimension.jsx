@@ -36,8 +36,8 @@ const SearchDimension = ({ setDimensionId }) => {
         <div className="card__SearchDimension">
             <input
                 className="card__input"
-                placeholder="Enter a Name location"
                 type="text"
+                placeholder="Enter a Name location"
                 value={dimensionName ? dimensionName : ''}
                 onChange={(e) => setDimensionName(e.target.value)}
             />
@@ -50,7 +50,7 @@ const SearchDimension = ({ setDimensionId }) => {
                                 key={result.id}
                                 onClick={() => handleClick(result)}
                             >
-                                {result.name}
+                                <p>{result.name}</p>
                             </li>
                         ))}
                     </ul>
