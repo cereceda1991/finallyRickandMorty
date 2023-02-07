@@ -3,7 +3,9 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
 const ResidentInfo = ({ url }) => {
+    // Establece un estado con valor inicial vacío
     const [character, setCharacter] = useState()
+    // Efecto que se ejecuta cada vez que se actualiza el valor de "url"
     useEffect(() => {
         axios.get(url)
             .then(res => setCharacter(res.data))

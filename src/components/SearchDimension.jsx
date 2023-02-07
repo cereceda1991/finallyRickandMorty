@@ -3,10 +3,13 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const SearchDimension = ({ setDimensionId }) => {
+    // Crea un estado para almacenar el nombre de la dimensión
     const [dimensionName, setDimensionName] = useState("");
+    // Crea un estado para almacenar los resultados
     const [results, setResults] = useState([]);
 
     useEffect(() => {
+        // Si el nombre de dimensión está vacío, se vacía la lista de resultados
         if (dimensionName === "") {
             setResults([]);
             return;
@@ -18,9 +21,13 @@ const SearchDimension = ({ setDimensionId }) => {
             .catch(err => console.log(err));
     }, [dimensionName]);
 
+    // Función que maneja el evento click al seleccionar un resultado
     const handleClick = (result) => {
+        // Actualiza el nombre de dimensión
         setDimensionName(result.name);
+        // Actualiza el ID de dimensión
         setDimensionId(result.id);
+        // Vacía la lista de resultados
         setResults([]);
     };
 
